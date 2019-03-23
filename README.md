@@ -8,6 +8,7 @@ Docker should be installed
     # docker build -t jenkins-docker .
 
     #  chmod 777 /var/jenkins_home/
+    #  chmod 777 /var/run/docker.sock
 
     # docker run -p 8080:8080 -p 50000:50000 -v /var/jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock --name jenkins -d jenkins-docker
 
