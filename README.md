@@ -22,6 +22,7 @@ Manage Plugins:
 
     - NodeJS
     - CloudBees Docker Build and Publish
+    - Job DSL
 
 
 
