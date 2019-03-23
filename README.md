@@ -26,7 +26,7 @@ Manage Plugins:
 
 Freestyle project
 
-
+![Jenkins](/img/pic1.png "Jenkins")
 
 ___
 
