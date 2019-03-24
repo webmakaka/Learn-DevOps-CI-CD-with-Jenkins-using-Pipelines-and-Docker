@@ -14,17 +14,12 @@ Docker should be installed
 
 
     http://<host>:8080
-    
-    # cat /var/jenkins_home/secrets/initialAdminPassword
 
+    # cat /var/jenkins_home/secrets/initialAdminPassword
 
 Manage Plugins:
 
-    - NodeJS
     - CloudBees Docker Build and Publish
-    - Job DSL
-
-
 
 Freestyle project
 
@@ -36,7 +31,90 @@ Freestyle project
 
 misc/Jenkinsfile.v2
 
-___
+![Jenkins](/img/pic2.png "Jenkins")
+
+<br/>
+
+### 7. Jenkins Integrations
+
+<br/>
+
+**1. Email integration**
+
+Plugins:
+
+    - Email Extension Plugin
+
+https://mailtrap.io/
+
+Jenkins --> Configure --> Extended E-mail Notification
+
+SMTP server: smpt.mailtrap.io
+
+Use SMTP Authentication
+
+Pipeline:
+
+https://github.com/wardviaene/jenkins-course/blob/master/email-notifications/Jenkinsfile
+
+<br/>
+
+**12. Sonarqube integration**
+
+Plugins:
+
+    - Sonarqube Scanner for Jenkins
+
+Docker-compose file:
+
+    $ cd ~
+    $ mkdir jenkins-sonarqube && cd jenkins-sonarqube
+    $ wget https://github.com/wardviaene/jenkins-course/blob/master/docker-compose/docker-compose.yml
+
+    $ docker-compose up
+    $ docker-compose log -f sonarqube
+
+    http://<host>:8000
+    admin/admin
+
+<br/>
+
+    Sonarqube --> Admin --> Security
+
+    Generate Tokens
+
+    jenkins --> generate
+
+<br/>
+
+    Jenkins --> Global Tool Configuration
+
+    Sonarqube Scanner: --> Name --> sonar
+    Install automaticaly
+
+    Credential --> Secret text
+
+    Scope: global
+    Secret: sonarqube token
+    ID: sonar
+    Description: sonar
+
+<br/>
+
+    New Pipeline Project
+
+    Pipeline:
+
+    https://github.com/wardviaene/jenkins-course/blob/master/sonarqube/Jenkinsfile
+
+<br/>
+
+### Other plugins
+
+    - NodeJS
+    - Job DSL
+
+---
 
 **Marley**
 
