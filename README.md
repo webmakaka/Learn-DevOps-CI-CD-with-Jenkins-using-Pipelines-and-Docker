@@ -30,6 +30,12 @@ Freestyle project
 
 ![Jenkins](/img/pic1.png "Jenkins")
 
+<br/>
+
+### 6. Jenkins Pipelines
+
+misc/Jenkinsfile.v2
+
 ___
 
 **Marley**
