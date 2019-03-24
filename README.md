@@ -59,7 +59,7 @@ https://github.com/wardviaene/jenkins-course/blob/master/email-notifications/Jen
 
 <br/>
 
-**12. Sonarqube integration**
+**12. Sonarqube integration (java)**
 
 Plugins:
 
@@ -67,14 +67,13 @@ Plugins:
 
 Docker-compose file:
 
-    $ cd ~
-    $ mkdir jenkins-sonarqube && cd jenkins-sonarqube
-    $ wget https://github.com/wardviaene/jenkins-course/blob/master/docker-compose/docker-compose.yml
+    $ mkdir ~/vagrant-jenkins-sonarqube && cd vagrant-jenkins-sonarqube
+    $ wget https://raw.githubusercontent.com/wardviaene/jenkins-course/master/docker-compose/docker-compose.yml
 
     $ docker-compose up
     $ docker-compose log -f sonarqube
 
-    http://<host>:8000
+    http://<host>:9000
     admin/admin
 
 <br/>
