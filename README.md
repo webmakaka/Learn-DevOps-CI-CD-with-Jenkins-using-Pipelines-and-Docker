@@ -47,6 +47,31 @@ New Item --> name: "nodejs docker pipeline" --> PipeLine
 
 ![Jenkins](/img/pic2.png "Jenkins")
 
+![Jenkins](/img/pic3.png "Jenkins")
+
+![Jenkins](/img/pic4.png "Jenkins")
+
+![Jenkins](/img/pic5.png "Jenkins")
+
+Inside file misc/Jenkinsfile replace 'dockerhub' on 'credential_id'. Commit and push code.
+
+<br/>
+
+```
+   stage('docker build/push') {
+     docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
+       def app = docker.build("marley/docker-nodejs-demo:${commit_id}", '.').push()
+     }
+   }
+
+```
+
+![Jenkins](/img/pic6.png "Jenkins")
+
+![Jenkins](/img/pic7.png "Jenkins")
+
+![Jenkins](/img/pic8.png "Jenkins")
+
 <br/>
 
 **6. Demo Build, test, and run everything in Docker containers**
@@ -135,6 +160,3 @@ Docker-compose file:
 **Marley**
 
 <a href="https://jsdev.org">jsdev.org</a>
-
-email:  
-![Marley](http://img.fotografii.org/a3333333mail.gif "Marley")
