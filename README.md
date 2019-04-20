@@ -2,20 +2,25 @@
 
 Docker should be installed
 
-    # cd ~
-    # git clone https://github.com/wardviaene/jenkins-docker
-    # cd jenkins-docker
-    # docker build -t jenkins-docker .
+    $ cd ~
+    $ git clone https://github.com/marley-nodejs/Learn-DevOps-CI-CD-with-Jenkins-using-Pipelines-and-Docker
+
+    $ cd Learn-DevOps-CI-CD-with-Jenkins-using-Pipelines-and-Docker/
+
+    $ docker build -t jenkins-docker -f jenkins-docker.dokerfile .
+
+    $ sudo su -
 
     #  chmod -R 777 /var/jenkins_home/
     #  chmod 777 /var/run/docker.sock
 
     # docker run -p 8080:8080 -p 50000:50000 -v /var/jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock --name jenkins -d jenkins-docker
 
+<br/>
 
     http://<host>:8080
 
-    # cat /var/jenkins_home/secrets/initialAdminPassword
+<br/>
 
 Manage Plugins:
 
@@ -29,9 +34,26 @@ Freestyle project
 
 ### 6. Jenkins Pipelines
 
-misc/Jenkinsfile.v2
+**4. Demo Jenkins pipelines with NodeJS and Docker**
+
+Manage Plugins:
+
+    - NodeJS
+    - Job DSL
+
+<br/>
+
+New Item --> name: "nodejs docker pipeline" --> PipeLine
 
 ![Jenkins](/img/pic2.png "Jenkins")
+
+<br/>
+
+**6. Demo Build, test, and run everything in Docker containers**
+
+misc/Jenkinsfile.v2
+
+![Jenkins](/img/pic3.png "Jenkins")
 
 <br/>
 
@@ -107,11 +129,6 @@ Docker-compose file:
     https://github.com/wardviaene/jenkins-course/blob/master/sonarqube/Jenkinsfile
 
 <br/>
-
-### Other plugins
-
-    - NodeJS
-    - Job DSL
 
 ---
 
