@@ -12,7 +12,7 @@ node {
      }
    }
    stage('docker build/push') {
-     docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
+     docker.withRegistry('https://index.docker.io/v1/', 'dockerhub_credentials') {
        def app = docker.build("marley/docker-nodejs-demo:${commit_id}", '.').push()
      }
    }
