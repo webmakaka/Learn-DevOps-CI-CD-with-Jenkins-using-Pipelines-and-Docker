@@ -30,6 +30,8 @@ Freestyle project
 
 ![Jenkins](/img/pic1.png "Jenkins")
 
+![Jenkins](/img/pic2.png "Jenkins")
+
 <br/>
 
 ### 6. Jenkins Pipelines
@@ -44,8 +46,6 @@ Manage Plugins:
 <br/>
 
 New Item --> name: "nodejs docker pipeline" --> PipeLine
-
-![Jenkins](/img/pic2.png "Jenkins")
 
 ![Jenkins](/img/pic3.png "Jenkins")
 
