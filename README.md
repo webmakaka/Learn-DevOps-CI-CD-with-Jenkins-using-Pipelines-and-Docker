@@ -53,7 +53,11 @@ New Item --> name: "nodejs docker pipeline" --> PipeLine
 
 ![Jenkins](/img/pic5.png "Jenkins")
 
-Inside file misc/Jenkinsfile replace 'dockerhub' on 'credential_id'. Commit and push code.
+Inside file misc/Jenkinsfile replace 'dockerhub' on 'credential_id'.
+
+And marley/docker-nodejs-demo on your.
+
+Commit and push code.
 
 <br/>
 
@@ -78,7 +82,7 @@ Inside file misc/Jenkinsfile replace 'dockerhub' on 'credential_id'. Commit and 
 
 misc/Jenkinsfile.v2
 
-![Jenkins](/img/pic3.png "Jenkins")
+![Jenkins](/img/pic9.png "Jenkins")
 
 <br/>
 
