@@ -3,7 +3,7 @@
 Docker should be installed
 
     $ cd ~
-    $ git clone https://github.com/marley-nodejs/Learn-DevOps-CI-CD-with-Jenkins-using-Pipelines-and-Docker
+    $ git clone https://github.com/webmakaka/Learn-DevOps-CI-CD-with-Jenkins-using-Pipelines-and-Docker
 
     $ cd Learn-DevOps-CI-CD-with-Jenkins-using-Pipelines-and-Docker/
 
